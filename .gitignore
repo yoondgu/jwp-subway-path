@@ -34,3 +34,6 @@ out/
 
 ## Database ###
 db/
+
+## Log ##
+test.log
