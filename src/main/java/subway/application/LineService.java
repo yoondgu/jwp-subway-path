@@ -24,7 +24,8 @@ public class LineService {
     }
 
     public LineResponse saveLine(LineRequest request) {
-        Line persistLine = lineDao.insert(new Line(request.getName(), request.getColor()));
+        Line persistLine = lineDao.insert(
+                new Line(request.getName(), request.getColor(), request.getAdditionalCharge()));
         return LineResponse.of(persistLine);
     }
 
@@ -51,7 +52,8 @@ public class LineService {
     }
 
     public void updateLine(Long id, LineRequest lineUpdateRequest) {
-        lineDao.update(new Line(id, lineUpdateRequest.getName(), lineUpdateRequest.getColor()));
+        lineDao.update(new Line(id, lineUpdateRequest.getName(), lineUpdateRequest.getColor(),
+                lineUpdateRequest.getAdditionalCharge()));
     }
 
     public void deleteLineById(Long id) {

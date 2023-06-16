@@ -6,9 +6,8 @@ import static subway.fixture.StationFixture.FIXTURE_STATION_1;
 import static subway.fixture.StationFixture.FIXTURE_STATION_2;
 import static subway.fixture.StationFixture.FIXTURE_STATION_3;
 
-import io.restassured.RestAssured;
-import io.restassured.response.ExtractableResponse;
-import io.restassured.response.Response;
+import io.restassured.*;
+import io.restassured.response.*;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -40,7 +39,6 @@ public class LineIntegrationTest extends IntegrationTest {
     public void setUp() {
         super.setUp();
 
-        // TODO Request Fixture로 빼기
         lineRequest1 = new LineRequest("신분당선", "bg-red-600");
         lineRequest2 = new LineRequest("구신분당선", "bg-red-600");
     }

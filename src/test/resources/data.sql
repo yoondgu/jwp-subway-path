@@ -1,6 +1,6 @@
-insert ignore into LINE (id, name, color) VALUES(1, '1호선', 'blue');
-insert ignore into LINE (id, name, color) VALUES(2, '2호선', 'green');
-insert ignore into LINE (id, name, color) VALUES(3, '3호선', 'orange');
+insert ignore into LINE (id, name, color, additional_charge) VALUES(1, '1호선', 'blue', 0);
+insert ignore into LINE (id, name, color, additional_charge) VALUES(2, '2호선', 'green', 0);
+insert ignore into LINE (id, name, color, additional_charge) VALUES(3, '3호선', 'orange', 0);
 
 insert ignore into STATION (id, name) VALUES(1, '시청역');
 insert ignore into STATION (id, name) VALUES(2, '을지로3가역');

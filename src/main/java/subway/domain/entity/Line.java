@@ -6,19 +6,20 @@ public class Line {
     private Long id;
     private String name;
     private String color;
+    private long additionalCharge;
 
     public Line() {
     }
 
-    public Line(String name, String color) {
-        this.name = name;
-        this.color = color;
-    }
-
-    public Line(Long id, String name, String color) {
+    public Line(final Long id, final String name, final String color, final long additionalCharge) {
         this.id = id;
         this.name = name;
         this.color = color;
+        this.additionalCharge = additionalCharge;
+    }
+
+    public Line(final String name, final String color, final long additionalCharge) {
+        this(null, name, color, additionalCharge);
     }
 
     public Long getId() {
@@ -31,6 +32,10 @@ public class Line {
 
     public String getColor() {
         return color;
+    }
+
+    public long getAdditionalCharge() {
+        return additionalCharge;
     }
 
     @Override
