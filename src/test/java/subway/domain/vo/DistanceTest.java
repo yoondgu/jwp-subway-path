@@ -1,4 +1,4 @@
-package subway.domain;
+package subway.domain.vo;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import subway.domain.exception.IllegalDistanceArgumentException;
-import subway.domain.vo.Distance;
 
 @DisplayName("거리 단위 테스트")
 class DistanceTest {

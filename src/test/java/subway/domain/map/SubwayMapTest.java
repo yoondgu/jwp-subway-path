@@ -1,4 +1,4 @@
-package subway.domain;
+package subway.domain.map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -21,10 +21,9 @@ import org.junit.jupiter.api.Test;
 import subway.domain.entity.Line;
 import subway.domain.exception.EmptyRoutedStationsSearchResultException;
 import subway.domain.exception.IllegalSubwayMapArgumentException;
-import subway.domain.map.SubwayMap;
-import subway.domain.map.route.TransferableRoute;
 import subway.domain.map.graph.MultiRoutedStations;
 import subway.domain.map.graph.RoutedStations;
+import subway.domain.map.route.TransferableRoute;
 
 @DisplayName("지하철 노선도 단위 테스트")
 class SubwayMapTest {

@@ -1,4 +1,4 @@
-package subway.domain;
+package subway.domain.map.graph;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static subway.fixture.LineFixture.FIXTURE_LINE_1;
@@ -17,8 +17,6 @@ import org.junit.jupiter.api.Test;
 import subway.domain.entity.Line;
 import subway.domain.entity.Section;
 import subway.domain.entity.Station;
-import subway.domain.map.graph.MultiRoutedStations;
-import subway.domain.map.graph.RoutedStations;
 import subway.domain.map.graph.edge.LineClassifiableSectionEdge;
 
 @DisplayName("무방향 다중 역 연결 그래프 단위 테스트")
