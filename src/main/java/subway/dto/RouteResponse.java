@@ -7,9 +7,9 @@ public class RouteResponse {
 
     private final List<StationResponse> stations;
     private final int totalDistance;
-    private final int totalFare;
+    private final long totalFare;
 
-    private RouteResponse(final List<StationResponse> stations, final int totalDistance, final int totalFare) {
+    private RouteResponse(final List<StationResponse> stations, final int totalDistance, final long totalFare) {
         this.stations = stations;
         this.totalDistance = totalDistance;
         this.totalFare = totalFare;
@@ -31,7 +31,7 @@ public class RouteResponse {
         return totalDistance;
     }
 
-    public int getTotalFare() {
+    public long getTotalFare() {
         return totalFare;
     }
 }

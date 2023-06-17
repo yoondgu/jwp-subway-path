@@ -21,4 +21,12 @@ public class TransferableRoute {
     public List<Station> stations() {
         return new ArrayList<>(path.getVertexList());
     }
+
+    public Fare additionalCharge() {
+        final long maximumAdditionalCharge = path.getEdgeList().stream()
+                .mapToLong(edge -> edge.getLine().getAdditionalCharge())
+                .max()
+                .orElse(0);
+        return new Fare(maximumAdditionalCharge);
+    }
 }
