@@ -8,5 +8,11 @@ insert ignore into SECTIONS (id, line_id, left_station_id, right_station_id, dis
 insert ignore into SECTIONS (id, line_id, left_station_id, right_station_id, distance) VALUES(7, 2, 1, 8, 10);
 insert ignore into SECTIONS (id, line_id, left_station_id, right_station_id, distance) VALUES(8, 2, 8, 9, 10);
 insert ignore into SECTIONS (id, line_id, left_station_id, right_station_id, distance) VALUES(9, 2, 9, 10, 10);
+insert ignore into SECTIONS (id, line_id, left_station_id, right_station_id, distance) VALUES(10, 2, 10, 11, 20);
 
-insert ignore into SECTIONS (id, line_id, left_station_id, right_station_id, distance) VALUES(10, 3, 2, 9, 10);
+insert ignore into SECTIONS (id, line_id, left_station_id, right_station_id, distance) VALUES(11, 3, 2, 9, 10);
+insert ignore into SECTIONS (id, line_id, left_station_id, right_station_id, distance) VALUES(12, 3, 9, 12, 30);
+insert ignore into SECTIONS (id, line_id, left_station_id, right_station_id, distance) VALUES(13, 3, 12, 13, 10);
+
+insert ignore into SECTIONS (id, line_id, left_station_id, right_station_id, distance) VALUES(14, 4, 11, 12, 10);
+insert ignore into SECTIONS (id, line_id, left_station_id, right_station_id, distance) VALUES(15, 4, 12, 13, 5);

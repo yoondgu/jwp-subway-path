@@ -1,11 +1,13 @@
 package subway.ui;
 
+import javax.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import subway.application.RouteService;
+import subway.dto.RouteRequest;
 import subway.dto.RouteResponse;
 
 @RestController
@@ -19,9 +21,8 @@ public class RouteController {
     }
 
     @GetMapping
-    public ResponseEntity<RouteResponse> findShortestRoute(@RequestParam Long sourceStationId,
-                                                           @RequestParam Long targetStationId) {
-        RouteResponse shortestRoute = routeService.findShortestRoute(sourceStationId, targetStationId);
+    public ResponseEntity<RouteResponse> findShortestRoute(@RequestBody @Valid RouteRequest routeRequest) {
+        RouteResponse shortestRoute = routeService.findShortestRoute(routeRequest);
 
         return ResponseEntity.ok().body(shortestRoute);
     }

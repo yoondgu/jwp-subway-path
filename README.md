@@ -13,10 +13,10 @@
 - [x] 경로 조회 API 구현
     - 최단 거리 경로, 요금 정보 포함하여 응답
     - 요금 조회 기능 추가
-- [ ] 요금 정책 추가
+- [x] 요금 정책 추가
     - [x] 노선별 추가 요금 정책 반영
     - [x] 연령별 요금 할인 정책 반영
-    - [ ] 경로 조회 API 변경
+    - [x] 경로 조회 API 변경
 
 ### 프로그래밍 요구사항
 
@@ -165,7 +165,12 @@ HTTP/1.1 204
 #### Request
 
 ```http request
-GET /routes?sourceStationId={sourceStationId}&target={targetStationId} HTTP/1.1
+GET /routes HTTP/1.1
+{
+    "sourceStationId": 1,
+    "targetStationId": 2,
+    "passengerAge": 13
+}
 ```
 
 #### Response

@@ -25,6 +25,7 @@ import subway.dao.SectionDao;
 import subway.dao.StationDao;
 import subway.domain.exception.RequestDataNotFoundException;
 import subway.domain.fare.BasicFareCalculator;
+import subway.dto.RouteRequest;
 
 @DisplayName("지하철 경로 서비스 테스트")
 @ExtendWith(MockitoExtension.class)
@@ -56,7 +57,7 @@ class RouteServiceTest {
         when(sectionDao.findByLineId(3L)).thenReturn(ROUTED_SECTIONS_3_TRANSFER_1_AT_ST2_TRANSFER_2_AT_ST9);
 
         // when, then
-        assertDoesNotThrow(() -> routeService.findShortestRoute(1L, 9L));
+        assertDoesNotThrow(() -> routeService.findShortestRoute(new RouteRequest(1L, 9L, 30)));
     }
 
     @DisplayName("최단 경로 조회 시 출발 역이 DB에 존재하지 않으면 예외를 발생한다")
@@ -66,7 +67,7 @@ class RouteServiceTest {
         when(stationDao.findById(1L)).thenReturn(Optional.empty());
 
         // when, then
-        assertThatThrownBy(() -> routeService.findShortestRoute(1L, 2L))
+        assertThatThrownBy(() -> routeService.findShortestRoute(new RouteRequest(1L, 2L, 30)))
                 .isInstanceOf(RequestDataNotFoundException.class)
                 .hasMessageContaining("출발 역이 존재하지 않습니다.");
     }
@@ -79,7 +80,7 @@ class RouteServiceTest {
         when(stationDao.findById(2L)).thenReturn(Optional.empty());
 
         // when, then
-        assertThatThrownBy(() -> routeService.findShortestRoute(1L, 2L))
+        assertThatThrownBy(() -> routeService.findShortestRoute(new RouteRequest(1L, 2L, 30)))
                 .isInstanceOf(RequestDataNotFoundException.class)
                 .hasMessageContaining("도착 역이 존재하지 않습니다.");
     }
