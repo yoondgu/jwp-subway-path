@@ -1,7 +1,7 @@
 package subway.domain.map.route;
 
 import java.util.List;
-import subway.domain.vo.Fare;
+import subway.domain.entity.Line;
 import subway.domain.entity.Station;
 import subway.domain.vo.Distance;
 
@@ -11,5 +11,5 @@ public interface Route {
 
     List<Station> stations();
 
-    Fare additionalCharge();
+    List<Line> lines();
 }

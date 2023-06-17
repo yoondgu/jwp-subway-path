@@ -1,11 +1,11 @@
 package subway.domain.fare;
 
-import subway.domain.vo.Fare;
 import subway.domain.entity.Passenger;
 import subway.domain.map.route.Route;
 import subway.domain.vo.Distance;
+import subway.domain.vo.Fare;
 
-public class BasicFarePolicy implements FarePolicy {
+public class BasicFareCalculator implements FareCalculator {
 
     private static final Distance OVER_FARE_LEVEL1_RANGE_MINIMUM = new Distance(10);
     private static final Distance OVER_FARE_LEVEL2_RANGE_MINIMUM = new Distance(50);

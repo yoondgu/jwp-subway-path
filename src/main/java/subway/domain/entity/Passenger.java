@@ -1,16 +1,14 @@
 package subway.domain.entity;
 
-import subway.domain.vo.Age;
-
 public class Passenger {
 
-    private final Age age;
+    private final int age;
 
-    public Passenger(final Age age) {
+    public Passenger(final int age) {
         this.age = age;
     }
 
-    public Age getAge() {
+    public int getAge() {
         return age;
     }
 }

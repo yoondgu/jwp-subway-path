@@ -23,8 +23,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import subway.dao.LineDao;
 import subway.dao.SectionDao;
 import subway.dao.StationDao;
-import subway.domain.fare.BasicFarePolicy;
 import subway.domain.exception.RequestDataNotFoundException;
+import subway.domain.fare.BasicFareCalculator;
 
 @DisplayName("지하철 경로 서비스 테스트")
 @ExtendWith(MockitoExtension.class)
@@ -40,7 +40,8 @@ class RouteServiceTest {
 
     @BeforeEach
     void setUp() {
-        routeService = new RouteService(new BasicFarePolicy(), lineDao, sectionDao, stationDao);
+        routeService = new RouteService(new BasicFareCalculator(), lineDao, sectionDao,
+                stationDao);
     }
 
     @DisplayName("최단 경로 조회 시 해당 경로의 총 거리와 요금을 계산해 반환한다")

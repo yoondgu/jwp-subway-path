@@ -2,10 +2,11 @@ package subway.domain.map.route;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.jgrapht.GraphPath;
-import subway.domain.vo.Fare;
-import subway.domain.map.graph.edge.LineClassifiableSectionEdge;
+import subway.domain.entity.Line;
 import subway.domain.entity.Station;
+import subway.domain.map.graph.edge.LineClassifiableSectionEdge;
 import subway.domain.vo.Distance;
 
 public class TransferableRoute implements Route {
@@ -24,11 +25,10 @@ public class TransferableRoute implements Route {
         return new ArrayList<>(path.getVertexList());
     }
 
-    public Fare additionalCharge() {
-        final long maximumAdditionalCharge = path.getEdgeList().stream()
-                .mapToLong(edge -> edge.getLine().getAdditionalCharge())
-                .max()
-                .orElse(0);
-        return new Fare(maximumAdditionalCharge);
+    public List<Line> lines() {
+        return path.getEdgeList()
+                .stream()
+                .map(LineClassifiableSectionEdge::getLine)
+                .collect(Collectors.toList());
     }
 }
