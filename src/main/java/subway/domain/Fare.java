@@ -10,6 +10,18 @@ public class Fare {
         this.value = value;
     }
 
+    public Fare plus(Fare other) {
+        return new Fare(value + other.value);
+    }
+
+    public Fare minus(Fare other) {
+        return new Fare(value - other.value);
+    }
+
+    public Fare multiply(double rate) {
+        return new Fare((long) (value * rate));
+    }
+
     public long getValue() {
         return value;
     }

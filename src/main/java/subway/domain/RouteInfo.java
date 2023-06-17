@@ -16,11 +16,11 @@ public class RouteInfo {
         this.totalFare = totalFare;
     }
 
-    public static RouteInfo from(TransferableRoute transferableRoute, FareCalculator fareCalculator) {
+    public static RouteInfo of(TransferableRoute transferableRoute, Fare totalFare) {
         return new RouteInfo(
                 transferableRoute.stations(),
                 transferableRoute.totalDistance(),
-                fareCalculator.calculate(transferableRoute.totalDistance())
+                totalFare
         );
     }
 

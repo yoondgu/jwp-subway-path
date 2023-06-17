@@ -6,8 +6,10 @@ import org.springframework.stereotype.Service;
 import subway.dao.LineDao;
 import subway.dao.SectionDao;
 import subway.dao.StationDao;
-import subway.domain.BasicFareCalculator;
+import subway.domain.Age;
+import subway.domain.FarePolicy;
 import subway.domain.MultiRoutedStations;
+import subway.domain.Passenger;
 import subway.domain.RouteInfo;
 import subway.domain.RoutedStations;
 import subway.domain.SubwayMap;
@@ -20,11 +22,16 @@ import subway.dto.RouteResponse;
 @Service
 public class RouteService {
 
+    private final FarePolicy farePolicy;
     private final LineDao lineDao;
     private final SectionDao sectionDao;
     private final StationDao stationDao;
 
-    public RouteService(final LineDao lineDao, final SectionDao sectionDao, final StationDao stationDao) {
+    public RouteService(final FarePolicy farePolicy,
+                        final LineDao lineDao,
+                        final SectionDao sectionDao,
+                        final StationDao stationDao) {
+        this.farePolicy = farePolicy;
         this.lineDao = lineDao;
         this.sectionDao = sectionDao;
         this.stationDao = stationDao;
@@ -38,8 +45,8 @@ public class RouteService {
 
         Map<Line, RoutedStations> sectionsByLine = findSectionsByLine();
         SubwayMap subwayMap = new SubwayMap(MultiRoutedStations.from(sectionsByLine));
-        TransferableRoute transferableRoute = subwayMap.findShortestRoute(sourceStation, targetStation);
-        RouteInfo routeInfo = RouteInfo.from(transferableRoute, new BasicFareCalculator());
+        TransferableRoute route = subwayMap.findShortestRoute(sourceStation, targetStation);
+        RouteInfo routeInfo = RouteInfo.of(route, farePolicy.calculate(route, new Passenger(Age.CHILD)));
         return RouteResponse.from(routeInfo);
     }
 

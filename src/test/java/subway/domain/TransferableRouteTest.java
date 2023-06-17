@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
 
 class TransferableRouteTest {
 
-    @DisplayName("해당 경로에 적용할 추가요금을 계산한다")
+    @DisplayName("해당 경로에 적용할 추가요금을 찾는다")
     @Test
     void additionalCharge() {
         SubwayMap subwayMap = new SubwayMap(MultiRoutedStations.from(Map.of(

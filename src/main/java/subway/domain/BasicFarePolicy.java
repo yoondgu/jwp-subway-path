@@ -2,7 +2,7 @@ package subway.domain;
 
 import subway.domain.vo.Distance;
 
-public class BasicFareCalculator implements FareCalculator {
+public class BasicFarePolicy implements FarePolicy {
 
     private static final Distance OVER_FARE_LEVEL1_RANGE_MINIMUM = new Distance(10);
     private static final Distance OVER_FARE_LEVEL2_RANGE_MINIMUM = new Distance(50);
@@ -12,7 +12,8 @@ public class BasicFareCalculator implements FareCalculator {
     private static final int OVER_FARE_RATE = 100;
 
     @Override
-    public Fare calculate(final Distance distance) {
+    public Fare calculate(final Route route, final Passenger passenger) {
+        Distance distance = route.totalDistance();
         if (distance.isWithIn(OVER_FARE_LEVEL1_RANGE_MINIMUM)) {
             return new Fare(BASIC_FARE);
         }

@@ -6,7 +6,7 @@ import org.jgrapht.GraphPath;
 import subway.domain.entity.Station;
 import subway.domain.vo.Distance;
 
-public class TransferableRoute {
+public class TransferableRoute implements Route {
 
     private final GraphPath<Station, LineClassifiableSectionEdge> path;
 
