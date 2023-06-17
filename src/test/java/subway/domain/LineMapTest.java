@@ -24,6 +24,7 @@ import subway.domain.entity.Section;
 import subway.domain.entity.Station;
 import subway.domain.exception.IllegalDistanceArgumentException;
 import subway.domain.exception.IllegalLineMapArgumentException;
+import subway.domain.map.LineMap;
 import subway.domain.vo.Distance;
 
 @DisplayName("역 개별 노선도 단위 테스트")

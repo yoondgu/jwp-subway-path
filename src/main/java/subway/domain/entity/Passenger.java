@@ -1,4 +1,6 @@
-package subway.domain;
+package subway.domain.entity;
+
+import subway.domain.vo.Age;
 
 public class Passenger {
 

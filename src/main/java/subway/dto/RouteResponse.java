@@ -1,7 +1,7 @@
 package subway.dto;
 
 import java.util.List;
-import subway.domain.RouteInfo;
+import subway.domain.map.route.RouteInfo;
 
 public class RouteResponse {
 

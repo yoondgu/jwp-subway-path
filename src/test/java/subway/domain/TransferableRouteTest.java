@@ -13,6 +13,11 @@ import static subway.fixture.StationFixture.FIXTURE_STATION_9;
 import java.util.Map;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import subway.domain.map.SubwayMap;
+import subway.domain.map.graph.MultiRoutedStations;
+import subway.domain.map.graph.RoutedStations;
+import subway.domain.vo.Fare;
+import subway.domain.map.route.TransferableRoute;
 
 class TransferableRouteTest {
 

@@ -1,4 +1,4 @@
-package subway.domain;
+package subway.domain.map;
 
 import java.util.Objects;
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
@@ -6,6 +6,9 @@ import subway.domain.entity.Station;
 import subway.domain.exception.EmptyRoutedStationsSearchResultException;
 import subway.domain.exception.IllegalSubwayMapArgumentException;
 import subway.domain.exception.JgraphtException;
+import subway.domain.map.route.TransferableRoute;
+import subway.domain.map.graph.MultiRoutedStations;
+import subway.domain.map.graph.edge.LineClassifiableSectionEdge;
 
 public class SubwayMap {
 

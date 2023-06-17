@@ -1,4 +1,4 @@
-package subway.domain;
+package subway.domain.map.graph;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,6 +13,7 @@ import subway.domain.entity.Line;
 import subway.domain.entity.Section;
 import subway.domain.entity.Station;
 import subway.domain.exception.JgraphtException;
+import subway.domain.map.graph.edge.LineClassifiableSectionEdge;
 
 public class MultiRoutedStations extends WeightedMultigraph<Station, LineClassifiableSectionEdge> {
 

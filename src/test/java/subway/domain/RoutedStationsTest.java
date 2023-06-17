@@ -15,6 +15,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import subway.domain.entity.Section;
 import subway.domain.exception.AbnormalRoutedStationsException;
+import subway.domain.map.graph.RoutedStations;
 import subway.domain.vo.Distance;
 
 @DisplayName("하행 단선 역 연결 그래프 단위 테스트")

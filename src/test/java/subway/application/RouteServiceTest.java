@@ -23,7 +23,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import subway.dao.LineDao;
 import subway.dao.SectionDao;
 import subway.dao.StationDao;
-import subway.domain.BasicFarePolicy;
+import subway.domain.fare.BasicFarePolicy;
 import subway.domain.exception.RequestDataNotFoundException;
 
 @DisplayName("지하철 경로 서비스 테스트")

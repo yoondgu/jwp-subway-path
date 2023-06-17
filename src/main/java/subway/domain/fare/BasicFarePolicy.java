@@ -1,5 +1,8 @@
-package subway.domain;
+package subway.domain.fare;
 
+import subway.domain.vo.Fare;
+import subway.domain.entity.Passenger;
+import subway.domain.map.route.Route;
 import subway.domain.vo.Distance;
 
 public class BasicFarePolicy implements FarePolicy {

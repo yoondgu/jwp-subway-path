@@ -1,7 +1,8 @@
-package subway.domain;
+package subway.domain.map.route;
 
 import java.util.List;
 import subway.domain.entity.Station;
+import subway.domain.vo.Fare;
 import subway.domain.vo.Distance;
 
 public class RouteInfo {

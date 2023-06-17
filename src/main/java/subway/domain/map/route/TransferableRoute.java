@@ -1,8 +1,10 @@
-package subway.domain;
+package subway.domain.map.route;
 
 import java.util.ArrayList;
 import java.util.List;
 import org.jgrapht.GraphPath;
+import subway.domain.vo.Fare;
+import subway.domain.map.graph.edge.LineClassifiableSectionEdge;
 import subway.domain.entity.Station;
 import subway.domain.vo.Distance;
 

@@ -1,4 +1,4 @@
-package subway.domain;
+package subway.domain.map;
 
 import static subway.domain.vo.Direction.DOWN;
 
@@ -12,6 +12,7 @@ import subway.domain.entity.Station;
 import subway.domain.exception.EmptySectionOperationException;
 import subway.domain.exception.IllegalDistanceArgumentException;
 import subway.domain.exception.IllegalLineMapArgumentException;
+import subway.domain.map.graph.RoutedStations;
 import subway.domain.vo.Direction;
 import subway.domain.vo.Distance;
 

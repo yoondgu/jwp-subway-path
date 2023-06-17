@@ -1,4 +1,4 @@
-package subway.domain;
+package subway.domain.map.graph.edge;
 
 import org.jgrapht.graph.DefaultWeightedEdge;
 import subway.domain.entity.Line;

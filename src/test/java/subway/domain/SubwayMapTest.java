@@ -21,6 +21,10 @@ import org.junit.jupiter.api.Test;
 import subway.domain.entity.Line;
 import subway.domain.exception.EmptyRoutedStationsSearchResultException;
 import subway.domain.exception.IllegalSubwayMapArgumentException;
+import subway.domain.map.SubwayMap;
+import subway.domain.map.route.TransferableRoute;
+import subway.domain.map.graph.MultiRoutedStations;
+import subway.domain.map.graph.RoutedStations;
 
 @DisplayName("지하철 노선도 단위 테스트")
 class SubwayMapTest {

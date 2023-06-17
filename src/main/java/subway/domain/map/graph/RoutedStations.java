@@ -1,4 +1,4 @@
-package subway.domain;
+package subway.domain.map.graph;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,6 +16,7 @@ import subway.domain.entity.Station;
 import subway.domain.exception.AbnormalRoutedStationsException;
 import subway.domain.exception.EmptyRoutedStationsSearchResultException;
 import subway.domain.exception.JgraphtException;
+import subway.domain.map.graph.edge.SectionEdge;
 
 public class RoutedStations extends SimpleDirectedWeightedGraph<Station, SectionEdge> {
 

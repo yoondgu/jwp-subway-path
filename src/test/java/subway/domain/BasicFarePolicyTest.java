@@ -8,9 +8,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import subway.domain.entity.Station;
-import subway.domain.passenger.Age;
-import subway.domain.passenger.Passenger;
-import subway.domain.route.Route;
+import subway.domain.fare.BasicFarePolicy;
+import subway.domain.vo.Fare;
+import subway.domain.vo.Age;
+import subway.domain.entity.Passenger;
+import subway.domain.map.route.Route;
 import subway.domain.vo.Distance;
 
 @DisplayName("요금 계산기 단위 테스트")

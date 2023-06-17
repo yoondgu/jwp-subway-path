@@ -10,7 +10,7 @@ import subway.domain.vo.Distance;
 import subway.domain.entity.Section;
 import subway.domain.entity.Station;
 import subway.domain.exception.RequestDataNotFoundException;
-import subway.domain.LineMap;
+import subway.domain.map.LineMap;
 import subway.dto.SectionRequest;
 
 @Service

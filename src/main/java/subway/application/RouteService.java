@@ -6,17 +6,17 @@ import org.springframework.stereotype.Service;
 import subway.dao.LineDao;
 import subway.dao.SectionDao;
 import subway.dao.StationDao;
-import subway.domain.Age;
-import subway.domain.FarePolicy;
-import subway.domain.MultiRoutedStations;
-import subway.domain.Passenger;
-import subway.domain.RouteInfo;
-import subway.domain.RoutedStations;
-import subway.domain.SubwayMap;
-import subway.domain.TransferableRoute;
+import subway.domain.fare.FarePolicy;
+import subway.domain.map.graph.MultiRoutedStations;
+import subway.domain.map.route.RouteInfo;
+import subway.domain.map.graph.RoutedStations;
+import subway.domain.map.SubwayMap;
 import subway.domain.entity.Line;
 import subway.domain.entity.Station;
 import subway.domain.exception.RequestDataNotFoundException;
+import subway.domain.vo.Age;
+import subway.domain.entity.Passenger;
+import subway.domain.map.route.TransferableRoute;
 import subway.dto.RouteResponse;
 
 @Service

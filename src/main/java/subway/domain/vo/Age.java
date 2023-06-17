@@ -1,6 +1,7 @@
-package subway.domain;
+package subway.domain.vo;
 
 import java.util.function.Function;
+import subway.domain.vo.Fare;
 
 public enum Age {
 

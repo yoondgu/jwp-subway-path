@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import subway.dao.LineDao;
 import subway.dao.SectionDao;
-import subway.domain.RoutedStations;
+import subway.domain.map.graph.RoutedStations;
 import subway.domain.entity.Line;
 import subway.domain.entity.Section;
 import subway.dto.LineRequest;

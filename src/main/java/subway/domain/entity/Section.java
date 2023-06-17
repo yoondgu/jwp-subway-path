@@ -5,7 +5,7 @@ import static subway.domain.vo.Direction.DOWN;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-import subway.domain.SectionEdge;
+import subway.domain.map.graph.edge.SectionEdge;
 import subway.domain.exception.IllegalSectionArgumentException;
 import subway.domain.vo.Direction;
 import subway.domain.vo.Distance;
