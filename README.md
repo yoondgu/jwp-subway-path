@@ -1,4 +1,4 @@
-# jwp-lineMap-path
+# jwp-subway-path
 
 ## 요구사항
 
