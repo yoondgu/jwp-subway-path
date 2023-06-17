@@ -121,76 +121,7 @@
 
 ## API 명세
 
-### 역 등록
-
-#### Request
-
-- 역 등록은 기준역의 다음에 새로운 역을 추가합니다.
-- 상행, 하행 방향을 지정해주어야 합니다.
-
-```http request
-POST /lines/{id} HTTP/1.1
-{
-    "sectionStations": {
-        "baseStationId": 1,
-        "nextStationId": 2,
-        "distance": 2
-    },
-    "direction": "up"
-}
-```
-
-#### Response
-
-```http request
-HTTP/1.1 201
-```
-
-### 역 제거
-
-#### Request
-
-```http request
-DELETE /lines/{id}/{stationId} HTTP/1.1
-```
-
-#### Response
-
-```http request
-HTTP/1.1 204
-```
-
-### 경로 조회
-
-#### Request
-
-```http request
-GET /routes HTTP/1.1
-{
-    "sourceStationId": 1,
-    "targetStationId": 2,
-    "passengerAge": 13
-}
-```
-
-#### Response
-
-```http request
-{
-    "stations": [
-        {
-            "id": 1,
-            "name": "서울역"
-        },
-        {
-            "id": 2,
-            "name": "시청역"
-        }
-    ],
-    "totalDistance": 10,
-    "totalFare": 1000
-}
-```
+- 어플리케이션 실행 후 `http://localhost:8080/swagger-ui/index.html` 접속
 
 ## 코드리뷰 피드백 및 리팩터링 목록
 
@@ -219,8 +150,7 @@ GET /routes HTTP/1.1
     - [x] DTO 검증 로직 추가
         - not null 외의 검증은 도메인 책임으로 판단함
     - [x] 역 연결 그래프 일급 콜렉션으로 분리? 분리하는 의미가 없는 것 같아 진행하지 않음
-    - [ ] 인수 테스트 잘못된 요청 값에 대한 응답 관련 테스트 추가
-    - [ ] API 문서 자동화 도구 사용하기
+    - [x] API 문서 자동화 도구 사용하기
 
 - 피드백
     - [x] [LineRequest, LineResponse와 같이 외부 영역에서 정의되는 자료구조를 서비스에서 사용하면 어떤 문제가 있을까?](https://github.com/woowacourse/jwp-subway-path/pull/78#discussion_r1192853316)
